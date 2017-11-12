@@ -4,11 +4,11 @@ import re
 import random
 from facebookads import FacebookSession
 from facebookads import FacebookAdsApi
-from facebookads.objects import (
-    AdAccount,
-    AdPreview,
-    AdSet,
-)
+# from facebookads.objects import (
+#     AdAccount,
+#     AdPreview,
+#     AdSet,
+# )
 from . import secrets
 
 # These mappings can get fairly large -- they're stored globally to
