@@ -22,7 +22,7 @@ def create_ad(account, tagline):
         url="http://www.seattle.gov/visiting/",
 
         bid_type=AdSet.BidType.cpm,
-        bid_info={AdSet.Field.BidInfo.impressions: 53},  # $0.53 / thousand
+        bid_info={AdSet.Field.BidInfo.impressions: 0.05},  # $0.53 / thousand
         daily_budget=1,  # $10.00 per day
 
         age_min=13,
