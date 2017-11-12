@@ -2,7 +2,14 @@
 
 import re
 import random
-import sys
+from facebookads import FacebookSession
+from facebookads import FacebookAdsApi
+from facebookads.objects import (
+    AdAccount,
+    AdPreview,
+    AdSet,
+)
+from . import secrets
 
 # These mappings can get fairly large -- they're stored globally to
 # save copying time.
@@ -132,9 +139,20 @@ def generate_pitch(filename, markovLength):
     buildMapping(wordlist(filename), markovLength)
     return genSentence(markovLength)
 
+
 def generate_pitches():
     for i in xrange(100):
         pitches.append(generate_pitch("assets/dataset.txt", (i % 3) + 1))
 
+
 if __name__ == "__main__":
+    session = FacebookSession(
+        secrets.my_app_id,
+        secrets.my_app_secret,
+        secrets.my_access_token,
+    )
+    api = FacebookAdsApi(session)
+    FacebookAdsApi.set_default_api(api)
+    my_account = AdAccount.get_my_account()
+
     generate_pitches()
