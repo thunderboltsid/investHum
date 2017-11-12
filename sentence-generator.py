@@ -9,7 +9,7 @@ from facebookads import FacebookAdsApi
 #     AdPreview,
 #     AdSet,
 # )
-from . import secrets
+import secrets
 
 # These mappings can get fairly large -- they're stored globally to
 # save copying time.
