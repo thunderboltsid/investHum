@@ -1,11 +1,11 @@
 import ad_creation_utils
 import os
 
-from facebookads.objects import (
-    AdAccount,
-    AdPreview,
-    AdSet,
-)
+# from facebookads.objects import (
+#     AdAccount,
+#     AdPreview,
+#     AdSet,
+# )
 
 
 def create_ad(account, tagline):

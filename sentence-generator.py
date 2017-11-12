@@ -146,6 +146,9 @@ def generate_pitches():
 
 
 if __name__ == "__main__":
+    generate_pitches()
+    for pitch in pitches:
+        print(pitch)
     session = FacebookSession(
         secrets.my_app_id,
         secrets.my_app_secret,
@@ -154,5 +157,3 @@ if __name__ == "__main__":
     api = FacebookAdsApi(session)
     FacebookAdsApi.set_default_api(api)
     my_account = AdAccount.get_my_account()
-
-    generate_pitches()
