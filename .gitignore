@@ -2,3 +2,4 @@
 .idea/
 env/
 secrets.py
+secrets.yaml
